@@ -1,0 +1,59 @@
+body 
+{
+    background-color: pink;;
+}
+.small-img {
+    max-height: 180px !important;
+    max-width: 180px !important;
+    margin: 10px 0 10px 0;
+    cursor: not-allowed;
+}
+.current-img {
+    max-height: 400px;
+    max-width: auto;
+    overflow-y: hidden;
+}
+.preview-thumbnail.nav-tabs {
+    border: none;
+    margin-top: 15px;
+    max-height: 200px;
+    overflow-y: hidden;
+}
+.preview-thumbnail.nav-tabs li {
+    /* if more thumbnails get added, change the 95%/n number */
+    width: calc(95%/4);
+    margin-right: 1%; 
+    overflow-y: hidden;
+}
+.preview-thumbnail.nav-tabs li img {
+    max-width: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+.form-group > label {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.radio-label {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0.3em;
+}
+
+.pink
+{
+    background-color: hotpink;
+    color: black;
+}
+
+.baby-blue {
+    background-color: lightblue;
+    color: black;
+}
+
+.grey {
+    background-color: lightgray;
+    color: black;
+}
