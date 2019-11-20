@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product Order Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="orderStyle.css">
+</head>
+
+<body>
+
+    <!-- main window for order/checkout info -->
+    <div class="container py-4">
+        <div class="card">
+            <div class="container-fluid py-4">
+                <div class="row">
+                    <div class="img-preview col-md-6">
+
+                        <!-- the currently selected image -->
+                        <div class="current-img rounded" id="current"><img src=img/pillow4.JPG style="width: 100%; height: 100%" alt="pink pillow"></div>
+                        <ul class="preview-thumbnail nav nav-tabs ">
+                            <li><img src="img/pillow1.JPG"></li>
+                            <li><img src="img/pillow3.JPG"></li>
+                            <li><img src="img/pillow4.JPG"></li>
+                            <li><img src="img/pillow5.JPG"></li>
+                        </ul>
+                    </div>
+                    <div class="CheckoutForm col-md-5 offset-1 py-3">
+                        <!-- checkout form goes here: pillowsize, color, price, CC#, exp. date, CVV submit button with form validation -->
+                        <h3 class="product-title">Create an Order<hr></h3>
+                        <form id="order-form" method="post" action="mailto:notarealemail@fake.com" enctype="multipart/form-data" name="order-form">
+                            <!-- color selections -->
+                            <div class="form-group">
+                                <label>Color:</label>
+                                <div class="form-check form-check-inline pink radio-label">
+                                    <input class="form-check-input" name="color" type="radio" id="pinkbtn" value="pink" checked>
+                                    <label class="form-check-label" for="pinkbtn">Pink</label>
+                                </div>
+                                <div class="form-check form-check-inline baby-blue radio-label">
+                                    <input class="form-check-input" name="color" type="radio" id="bluebtn" value="blue">
+                                    <label class="form-check-label" for="bluebtn">Blue</label>
+                                </div>
+                                <div class="form-check form-check-inline grey radio-label">
+                                    <input class="form-check-input" name="color" type="radio" id="greybtn" value="grey">
+                                    <label class="form-check-label" for="greybtn">Grey</label>
+                                </div>
+                            </div>
+                            <!-- Quantity of items purchased -->
+                            <div class="form-group">
+                                <label id="quantLabel">Quantity: </label>
+                                <input class="form-input" type="number" name="quantity" aria-labelledby="quantLabel" id="orderQuantity" min="1" value="1" required>
+                            </div>
+                            <div class="form-group">
+                                <label id="priceLabel" class="form-label">Total Price :</label>
+                                <input id="totalPrice" name="price" aria-labelledby="priceLabel" disabled>
+                            </div>
+                            <!-- Credit Card Info -->
+                            <hr>
+                            <hr>
+                            <div class="form-group">
+                                <label id="cc-label">Credit Card Number</label>
+                                <input class="form-control" type="text" name="CC_number" placeHolder="0000-0000-0000-0000" aria-labelledby="cc-label" required>
+                            </div>
+                            <div class="form-row form-group">
+                                <label class="col-3">Exp. Date</label>
+                                <div class="col-3"><input type="text" name="Expdate" class="form-control" placeholder="MM/YY" aria-label="Expiration Date" required></div>
+                                <label class="col-2">CVV</label>
+                                <div class="col-3"><input type="number" name="cvv" class="form-control" aria-label="Card Verification Number" required></div>
+                            </div>
+                            <div class="form-group">
+                                <label id="cardholderLabel">Cardholder's Name</label>
+                                <input class="form-control" type="text" name="cardholder" aria-labelledby="cardholderLabel" required>
+                            </div>
+                            <button type="submit" class="btn btn-success form-control">Confirm your order</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- row of other available products -->
+        <h3 class="text-center my-3" tabindex="0">Other Products</h3>
+        <div class="row bg-white rounded text-center">
+            <div class="col-md"><img class="small-img" src="https://via.placeholder.com/190x150/89cff0?text=item+TBD"></div>
+            <div class="col-md"><img class="small-img" src="https://via.placeholder.com/190x150/89cff0?text=item+TBD"></div>
+            <div class="col-md"><img class="small-img" src="https://via.placeholder.com/190x150/89cff0?text=item+TBD"></div>
+            <div class="col-md"><img class="small-img" src="https://via.placeholder.com/190x150/89cff0?text=item+TBD"></div>
+        </div>
+    </div>
+
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+
