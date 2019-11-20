@@ -1,5 +1,16 @@
 .contactForm {
     width: 30%;
     margin: auto;
+    margin-top: 5%;
+    background-color: white;
+    padding: 2%;
+    border-radius: 25px;
 }
 
+.fa-thumbs-up {
+    font-size: 300%;
+}
+
+body {
+    background-color: #ffe0e0;
+}
