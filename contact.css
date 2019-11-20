@@ -1,7 +1,7 @@
 .contactForm {
     width: 30%;
     margin: auto;
-    margin-top: 5%;
+    margin-top: 2%;
     background-color: white;
     padding: 2%;
     border-radius: 25px;
@@ -13,8 +13,4 @@
 
 body {
     background-color: #ffe0e0;
-}
-
-.btn-warning {
-
 }
