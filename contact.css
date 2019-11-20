@@ -12,5 +12,10 @@
 }
 
 body {
-    background-color: #ffe0e0;
+    background-color: pink;
+}
+
+.mailImg {
+    height: 30%;
+    width: 30%;
 }
