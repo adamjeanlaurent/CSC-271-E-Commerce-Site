@@ -5,6 +5,7 @@
     background-color: white;
     padding: 2%;
     border-radius: 25px;
+    min-width: 350px;
 }
 
 .fa-thumbs-up {
