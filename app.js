@@ -20,11 +20,11 @@ document.getElementById("load").classList.add(".loader");
 
 
 
-setTimeout(() =>{
+setTimeout(() => {
     document.getElementById("load").classList.remove(".loader");
     document.querySelector("header").style.display = "block";
     document.querySelector(".container-fluid").style.display = "block";
     document.querySelector(".container").style.display = "block";
     document.querySelector(".haha").style.display = "block";
     document.querySelector(".ans").style.display = "none";
-},3000);
+}, 2000);
