@@ -4,39 +4,70 @@
     box-sizing: border-box;
 } */
 
+
 /*body {*/
+
+
 /*    background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);*/
-    /*background: pink;*/
+
+
+/*background: pink;*/
+
+
 /*}*/
 
 .pillow {
     height: 80vh;
 }
+
+
 /*section {*/
-    /* margin-top: 200px; */
+
+
+/* margin-top: 200px; */
+
+
 /*    display: flex;*/
+
+
 /*    height: 80vh;*/
+
+
 /*    justify-content: center;*/
+
+
 /*    align-items: center;*/
+
+
 /*}*/
 
+
 /*.hero {*/
+
+
 /*    height: 60%;*/
+
+
 /*    width: 100%;*/
+
+
 /*    position: relative;*/
+
+
 /*}*/
-.jumbotron{
-    background-image:url("pillow2.jpg");
-    background-size:cover;
+
+.jumbotron {
+    background-image: url("img/pillow2.jpg");
+    background-size: cover;
     /*background-attachment: fixed;*/
     background-position: center center;
     height: 60vh;
 }
-.lol{
+
+.lol {
     Max-height: 200px;
     animation: limg 2s ease-in-out infinite
 }
-
 
 @keyframes limg {
     0% {
@@ -50,35 +81,39 @@
     }
 }
 
-.ans{
-    display:flex;
+.ans {
+    display: flex;
     justify-content: center;
-    margin-top:18em;
-    
+    margin-top: 18em;
 }
-.loader{
+
+.loader {
     position: relative;
 }
+
 .loader::before,
-.loader::after{
-    content:"";
-    width:1.8em;
-    height:1.8em;
-    position:absolute;
-    border-radius:4em;
+.loader::after {
+    content: "";
+    width: 1.8em;
+    height: 1.8em;
+    position: absolute;
+    border-radius: 4em;
 }
-.loader::before{
-    background:lightcoral;
-    left:0;
-    transform:traslateX(10px);
-    animation:Moveleft 1s ease infinite;
+
+.loader::before {
+    background: lightcoral;
+    left: 0;
+    transform: traslateX(10px);
+    animation: Moveleft 1s ease infinite;
 }
-.loader::after{
-    background:lightgreen;
-    right:0;
-    transform:traslateX(-10px);
-    animation:Moveright 1s ease infinite;
+
+.loader::after {
+    background: lightgreen;
+    right: 0;
+    transform: traslateX(-10px);
+    animation: Moveright 1s ease infinite;
 }
+
 @keyframes Moveright {
     0% {
         transform: translateX(-10px);
@@ -90,6 +125,7 @@
         transform: translateX(-10px);
     }
 }
+
 @keyframes Moveleft {
     0% {
         transform: translateX(10px);
