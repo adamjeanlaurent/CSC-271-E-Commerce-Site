@@ -20,3 +20,6 @@ body {
     height: 30%;
     width: 30%;
 }
+.invalid { border-color: red; }
+#error { color: red }
+#no{color: red}
