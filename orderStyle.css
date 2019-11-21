@@ -57,3 +57,12 @@ body
     background-color: lightgray;
     color: black;
 }
+
+input.invalid {
+    border-color: red;
+    background-color: pink;
+}
+
+input:focus.invalid {
+    outline: none;
+}

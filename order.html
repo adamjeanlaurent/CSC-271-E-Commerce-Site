@@ -31,8 +31,8 @@
                     </div>
                     <div class="CheckoutForm col-md-5 offset-1 py-3">
                         <!-- checkout form goes here: pillowsize, color, price, CC#, exp. date, CVV submit button with form validation -->
-                        <h3 class="product-title">Create an Order<hr></h3>
-                        <form id="order-form" method="post" action="mailto:notarealemail@fake.com" enctype="multipart/form-data" name="order-form">
+                        <h3 id="item-name" class="product-title">Comfort Pillow Wrap: $10.00<hr></h3>
+                        <form id="order-form" onsubmit="return validateForm()" method="post" action="mailto:notarealemail@fake.com" enctype="multipart/form-data" name="order-form">
                             <!-- color selections -->
                             <div class="form-group">
                                 <label>Color:</label>
@@ -52,18 +52,18 @@
                             <!-- Quantity of items purchased -->
                             <div class="form-group">
                                 <label id="quantLabel">Quantity: </label>
-                                <input class="form-input" type="number" name="quantity" aria-labelledby="quantLabel" id="orderQuantity" min="1" value="1" required>
+                                <input class="form-input" oninput="updatePrice()"type="number" name="quantity" aria-labelledby="quantLabel" id="orderQuantity" min="1" value="1" required>
                             </div>
                             <div class="form-group">
                                 <label id="priceLabel" class="form-label">Total Price :</label>
-                                <input id="totalPrice" name="price" aria-labelledby="priceLabel" disabled>
+                                <input id="totalPrice" name="price" aria-labelledby="priceLabel" readonly>
                             </div>
                             <!-- Credit Card Info -->
                             <hr>
                             <hr>
                             <div class="form-group">
                                 <label id="cc-label">Credit Card Number</label>
-                                <input class="form-control" type="text" name="CC_number" placeHolder="0000-0000-0000-0000" aria-labelledby="cc-label" required>
+                                <input class="form-control" type="text" name="CC_number" placeHolder="MC/Visa Only (no spaces/dashes)" aria-labelledby="cc-label" required>
                             </div>
                             <div class="form-row form-group">
                                 <label class="col-3">Exp. Date</label>
@@ -93,7 +93,8 @@
     </div>
 
     <script src="jquery.min.js"></script>
-    <script src = 'switchImage.js'></script>
+    <script src ='switchImage.js'></script>
+    <script src ='orderValidate.js'></script>
     <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 </body>
 </html>
