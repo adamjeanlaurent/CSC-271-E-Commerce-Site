@@ -1,7 +1,7 @@
-body{
-    background-image:linear-gradient(-20deg,#FFFFFF 0%, #FFC0CB 100%, #FFB6C1 100%);
-    background-repeat:no-repeat;
-    background-attachment:fixed;
+body {
+    background-image: linear-gradient(-20deg, #FFFFFF 0%, #FFC0CB 100%, #FFB6C1 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .small-img {
@@ -10,30 +10,34 @@ body{
     margin: 10px 0 10px 0;
     cursor: not-allowed;
 }
+
 .current-img {
     max-height: 400px;
     max-width: auto;
     overflow-y: hidden;
 }
+
 .preview-thumbnail.nav-tabs {
     border: none;
     margin-top: 15px;
     max-height: 200px;
     overflow-y: hidden;
 }
+
 .preview-thumbnail.nav-tabs li {
     /* if more thumbnails get added, change the 95%/n number */
     width: calc(95%/4);
-    margin-right: 1%; 
+    margin-right: 1%;
     overflow-y: hidden;
 }
+
 .preview-thumbnail.nav-tabs li img {
     max-width: 100%;
     display: block;
     cursor: pointer;
 }
 
-.form-group > label {
+.form-group>label {
     font-weight: bold;
     font-size: 20px;
 }
@@ -44,8 +48,7 @@ body{
     padding: 0.3em;
 }
 
-.pink
-{
+.pink {
     background-color: hotpink;
     color: black;
 }
