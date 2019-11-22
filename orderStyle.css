@@ -1,7 +1,9 @@
-body 
-{
-    background-color: pink;;
+body{
+    background-image:linear-gradient(-20deg,#FFFFFF 0%, #FFC0CB 100%, #FFB6C1 100%);
+    background-repeat:no-repeat;
+    background-attachment:fixed;
 }
+
 .small-img {
     max-height: 180px !important;
     max-width: 180px !important;
