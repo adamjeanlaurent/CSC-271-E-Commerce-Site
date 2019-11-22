@@ -20,6 +20,11 @@ body {
     height: 30%;
     width: 30%;
 }
+
+#mailImg {
+    width: 30%;
+    height: 30%;
+}
 .invalid { border-color: red; }
 #error { color: red }
 #no{color: red}
