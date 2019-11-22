@@ -18,7 +18,8 @@ email.onfocus = function() {
   
 
   phonenum.onblur = function() {
-    var phoneRegex = /^[0-9]{10}$/;
+    // make sure the user input 10 digits phone number
+    var phoneRegex = /^[0-9]{10}$/; 
     var isTrue = phoneRegex.test(phonenum.value);
 
     if (!isTrue) { // not phone
@@ -27,7 +28,7 @@ email.onfocus = function() {
       }
     };
 
-
+// if pass then remove the red box 
   phonenum.onfocus = function() {
     if (this.classList.contains('invalid')) {
 
