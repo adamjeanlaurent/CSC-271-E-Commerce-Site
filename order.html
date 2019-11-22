@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,45 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-drak">
+        <a href="mainpage.html" class="navbar-brand">
+            <img src="img/logo.png" height="28" alt="CoolBrand">
+        </a>
+        <h5 id="name"> &#160;&#160;&#160;&#160;pillow world</h5>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ml-auto">
+                <form class="navbar-form navbar-inline">
+                    <div class="input-group">
+                    </div>
+                </form>
+                <span class="navbar-text">
+                    <!--  160 for  space -->
+                    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                </span>
+                <div class="navbar-nav">
+                    <a href="mainpage.html" class="nav-item nav-link">
+                        <h5 id="button">Home</h5>
+                    </a>
+                    <span class="navbar-text">
+                        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                    </span>
+                    <!-- <button type="submit" class="btn btn-outline-danger">Order</button> -->
+                    <a href="order.html" class="nav-item nav-link">
+                        <h5 id="button">Order</h5>
+                    </a>
+                    <span class="navbar-text">
+                        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                    </span>
+                    <a href="contact.html" class="nav-item nav-link">
+                        <h5 id="button">Contact</h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <!-- main window for order/checkout info -->
     <div class="container py-4">
@@ -21,23 +61,30 @@
                     <div class="img-preview col-md-6">
 
                         <!-- the currently selected image -->
-                        <div class="current-img rounded " id="current"><img src=img/pillow4.JPG class = "currentPillow" style="width: 100%; height: 100%" alt="pink pillow"></div>
+                        <div class="current-img rounded " id="current"><img src=img/pillow4.JPG class="currentPillow"
+                                style="width: 100%; height: 100%" alt="pink pillow"></div>
                         <ul class="preview-thumbnail nav nav-tabs ">
-                            <li><img src="img/pillow1.JPG" class = "pillow"></li>
-                            <li><img src="img/pillow3.JPG" class = "pillow"></li>
-                            <li><img src="img/pillow4.JPG" class = "pillow"></li>
-                            <li><img src="img/pillow5.JPG" class = "pillow"></li>
+                            <li><img src="img/pillow1.JPG" class="pillow"></li>
+                            <li><img src="img/pillow3.JPG" class="pillow"></li>
+                            <li><img src="img/pillow4.JPG" class="pillow"></li>
+                            <li><img src="img/pillow5.JPG" class="pillow"></li>
                         </ul>
                     </div>
                     <div class="CheckoutForm col-md-5 offset-1 py-3">
+
                         <!-- checkout form goes here: pillowsize, color, price, CC#, exp. date, CVV submit button with form validation -->
-                        <h3 class="product-title">Create an Order<hr></h3>
-                        <form id="order-form" method="post" action="mailto:notarealemail@fake.com" enctype="multipart/form-data" name="order-form">
+                        <h3 id="item-name" class="product-title">Comfort Pillow Wrap: $10.00
+                            <hr>
+                        </h3>
+                        <form id="order-form" onsubmit="return validateForm()" method="post"
+                            action="mailto:notarealemail@fake.com" enctype="multipart/form-data" name="order-form">
+
                             <!-- color selections -->
                             <div class="form-group">
                                 <label>Color:</label>
                                 <div class="form-check form-check-inline pink radio-label">
-                                    <input class="form-check-input" name="color" type="radio" id="pinkbtn" value="pink" checked>
+                                    <input class="form-check-input" name="color" type="radio" id="pinkbtn" value="pink"
+                                        checked>
                                     <label class="form-check-label" for="pinkbtn">Pink</label>
                                 </div>
                                 <div class="form-check form-check-inline baby-blue radio-label">
@@ -49,31 +96,38 @@
                                     <label class="form-check-label" for="greybtn">Grey</label>
                                 </div>
                             </div>
+
                             <!-- Quantity of items purchased -->
                             <div class="form-group">
                                 <label id="quantLabel">Quantity: </label>
-                                <input class="form-input" type="number" name="quantity" aria-labelledby="quantLabel" id="orderQuantity" min="1" value="1" required>
+                                <input class="form-input" oninput="updatePrice()" type="number" name="quantity"
+                                    aria-labelledby="quantLabel" id="orderQuantity" min="1" value="1" required>
                             </div>
                             <div class="form-group">
                                 <label id="priceLabel" class="form-label">Total Price :</label>
-                                <input id="totalPrice" name="price" aria-labelledby="priceLabel" disabled>
+                                <input id="totalPrice" name="price" aria-labelledby="priceLabel" readonly>
                             </div>
+
                             <!-- Credit Card Info -->
                             <hr>
                             <hr>
                             <div class="form-group">
                                 <label id="cc-label">Credit Card Number</label>
-                                <input class="form-control" type="text" name="CC_number" placeHolder="0000-0000-0000-0000" aria-labelledby="cc-label" required>
+                                <input class="form-control" type="text" name="CC_number"
+                                    placeHolder="MC/Visa Only (no spaces/dashes)" aria-labelledby="cc-label" required>
                             </div>
                             <div class="form-row form-group">
                                 <label class="col-3">Exp. Date</label>
-                                <div class="col-3"><input type="text" name="Expdate" class="form-control" placeholder="MM/YY" aria-label="Expiration Date" required></div>
+                                <div class="col-3"><input type="text" name="Expdate" class="form-control"
+                                        placeholder="MM/YY" aria-label="Expiration Date" required></div>
                                 <label class="col-2">CVV</label>
-                                <div class="col-3"><input type="number" name="cvv" class="form-control" aria-label="Card Verification Number" required></div>
+                                <div class="col-3"><input type="number" name="cvv" class="form-control"
+                                        aria-label="Card Verification Number" required></div>
                             </div>
                             <div class="form-group">
                                 <label id="cardholderLabel">Cardholder's Name</label>
-                                <input class="form-control" type="text" name="cardholder" aria-labelledby="cardholderLabel" required>
+                                <input class="form-control" type="text" name="cardholder"
+                                    aria-labelledby="cardholderLabel" required>
                             </div>
                             <button type="submit" class="btn btn-success form-control">Confirm your order</button>
                         </form>
@@ -85,16 +139,57 @@
         <!-- row of other available products -->
         <h3 class="text-center my-3" tabindex="0">Other Products</h3>
         <div class="row bg-white rounded text-center">
-            <div class="col-md"><img class="small-img" src="https://via.placeholder.com/190x150/89cff0?text=item+TBD"></div>
-            <div class="col-md"><img class="small-img" src="https://via.placeholder.com/190x150/89cff0?text=item+TBD"></div>
-            <div class="col-md"><img class="small-img" src="https://via.placeholder.com/190x150/89cff0?text=item+TBD"></div>
-            <div class="col-md"><img class="small-img" src="https://via.placeholder.com/190x150/89cff0?text=item+TBD"></div>
+            <div class="col-md"><img class="small-img" src="https://via.placeholder.com/190x150/89cff0?text=item+TBD">
+            </div>
+            <div class="col-md"><img class="small-img" src="https://via.placeholder.com/190x150/89cff0?text=item+TBD">
+            </div>
+            <div class="col-md"><img class="small-img" src="https://via.placeholder.com/190x150/89cff0?text=item+TBD">
+            </div>
+            <div class="col-md"><img class="small-img" src="https://via.placeholder.com/190x150/89cff0?text=item+TBD">
+            </div>
         </div>
     </div>
 
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <h5>Contact US </h5>
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                    <ul class="list-unstyled list-inline social text-center">
+
+                        <li class="list-inline-item"><a href="https://www.facebook.com/ "><i
+                                    class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.twitter.com/"><i
+                                    class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.instagram.com"><i
+                                    class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.google.com/"><i
+                                    class="fa fa-google-plus"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.envelope.com/" target="_blank"><i
+                                    class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <footer>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Copyright &copy; 2019 URI CSC271 </p>
+                    </div>
+                    <div class="col-md-6 text-md-right">
+                        <a href="#" class="text-dark">Terms of Use</a>
+                        <span class="text-muted mx-2">|</span>
+                        <a href="#" class="text-dark">Privacy Policy</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </footer>
+
     <script src="jquery.min.js"></script>
-    <script src = 'switchImage.js'></script>
+    <script src='switchImage.js'></script>
+    <script src='orderValidate.js'></script>
     <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 </body>
-</html>
 
+</html>
