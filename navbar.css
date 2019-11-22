@@ -17,6 +17,7 @@ body {
     color:#FFB6C1;
     font-size:45px;
 }
+
 #foot{
     margin-top:100px ;
 
@@ -54,11 +55,13 @@ transition: .5s all ease;
 font-size:30px;
 margin-top:-10px;
 }
+
 #footer ul.social li a,
 #footer ul.quick-links li a{
 color:#FFB6C1;
 }
 
+/* the wrong input handle */
 .invalid { border-color: red; }
 #error { color: red }
 #no{color: red}
