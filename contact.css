@@ -1,3 +1,7 @@
+/* 
+    Main Contact Form Styles 
+*/
+
 .contactForm {
     width: 30%;
     margin: auto;
@@ -6,14 +10,6 @@
     padding: 2%;
     border-radius: 25px;
     min-width: 350px;
-}
-
-.fa-thumbs-up {
-    font-size: 300%;
-}
-
-body {
-    background-color: pink;
 }
 
 .mailImg {
@@ -25,6 +21,22 @@ body {
     width: 30%;
     height: 30%;
 }
+
+.fa-thumbs-up {
+    font-size: 300%;
+}
+
+/* 
+    Styles For Page As A Whole
+*/
+
+body {
+    background-color: pink;
+}
+
+/* 
+    Styles For Error Handling
+*/
 .invalid { border-color: red; }
 #error { color: red }
 #no{color: red}
