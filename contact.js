@@ -58,6 +58,50 @@ thumbsUp5.addEventListener('click', () => {
 });
 
 /*
+    This Changes the color of the thumbs up icon when tabbed to and a key is pressed, so it is accessible to those who can't see or use a mouse
+*/
+
+thumbsUp1.addEventListener('keypress', () => {
+    thumbsUp1.style.color = 'green';
+    thumbsUp2.style.color = 'black';
+    thumbsUp3.style.color = 'black';
+    thumbsUp4.style.color = 'black';
+    thumbsUp5.style.color = 'black';
+});
+
+thumbsUp2.addEventListener('keypress', () => {
+    thumbsUp1.style.color = 'green';
+    thumbsUp2.style.color = 'green';
+    thumbsUp3.style.color = 'black';
+    thumbsUp4.style.color = 'black';
+    thumbsUp5.style.color = 'black';
+});
+
+thumbsUp3.addEventListener('keypress', () => {
+    thumbsUp1.style.color = 'green';
+    thumbsUp2.style.color = 'green';
+    thumbsUp3.style.color = 'green';
+    thumbsUp4.style.color = 'black';
+    thumbsUp5.style.color = 'black';
+});
+
+thumbsUp4.addEventListener('keypress', () => {
+    thumbsUp1.style.color = 'green';
+    thumbsUp2.style.color = 'green';
+    thumbsUp3.style.color = 'green';
+    thumbsUp4.style.color = 'green';
+    thumbsUp5.style.color = 'black';
+});
+
+thumbsUp5.addEventListener('keypress', () => {
+    thumbsUp1.style.color = 'green';
+    thumbsUp2.style.color = 'green';
+    thumbsUp3.style.color = 'green';
+    thumbsUp4.style.color = 'green';
+    thumbsUp5.style.color = 'green';
+});
+
+/*
     The following block of code controls the fade in animation of form
 */
 
