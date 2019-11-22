@@ -1,6 +1,6 @@
-body {
+/* body {
     background-color: #ffe0e0;
-}
+} */
 #button{
     /* color:#FFC0CB; */
     /* font-family: cursive; */
@@ -58,7 +58,7 @@ margin-top:-10px;
 #footer ul.quick-links li a{
 color:#FFB6C1;
 }
-
+/* 
 .invalid { border-color: red; }
 #error { color: red }
-#no{color: red}
+#no{color: red} */
