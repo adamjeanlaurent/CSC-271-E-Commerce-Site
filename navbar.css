@@ -1,11 +1,3 @@
-body {
-    background-color: #ffe0e0;
-}
-
-#button {
-    /* color:#FFC0CB; */
-    /* font-family: cursive; */
-}
 
 #button:hover {
     color: #FFB6C1;
@@ -59,16 +51,4 @@ section .section-title {
 #footer ul.social li a,
 #footer ul.quick-links li a {
     color: #FFB6C1;
-}
-
-.invalid {
-    border-color: red;
-}
-
-#error {
-    color: red
-}
-
-#no {
-    color: red
 }

@@ -57,16 +57,18 @@ thumbsUp5.addEventListener('click', () => {
     thumbsUp5.style.color = 'green';
 });
 
+/*
+    The following block of code controls the fade in animation of form
+*/
 
 let opacity = 0;
 let timeInterval = 0;
 
-// fade in animation
 function fadeIn() {
     timeInterval = setInterval(show,20);
 }
 
-// slowly increases the opacity of the form
+// This function slowly increases the opacity of the form
 function show() {
     opacity = Number(window.getComputedStyle(form).getPropertyValue('opacity'));
     if(opacity < 1){
@@ -79,5 +81,6 @@ function show() {
     }
 }
 
+// set the opacity of the form to zero to allow for it to fade in once the page loads
 form.style.opacity = 0;
 fadeIn();

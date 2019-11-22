@@ -17,5 +17,4 @@ setTimeout(() => {
     document.querySelector("#footer").style.display = "block";
     document.querySelector(".haha").style.display = "block";
     document.querySelector(".ans").style.display = "none";
-
 }, 2000);
